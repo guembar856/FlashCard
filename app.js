@@ -5,15 +5,26 @@ function criaCartao (categoria, pergunta, resposta) {
 
       cartao.innerHTML = ` 
       <div class="cartao__conteudo">
-         <h3>Charadas</h3>
+         <h3>${categoria}</h3>
            <div class="cartao__conteudo__pergunta">
-              <p>O que é, o que é? Dois pontinhos cinzas no oceano?</p>
+              <p>${pergunta}</p>
             </div>
            <div class="cartao__conteudo__resposta">
-            <p>Twobarões</p>
+            <p>${resposta}</p>
       </div>
       </div>
-      `
+     `
+
+      let respostaEstaVisivel = false
+
+      function viraCartao() {
+          respostaEstaVisivel = !respostaEstaVisivel
+          cartao.classList.toggle('active', respostaEstaVisivel)
+      }
+      cartao.addEventListener('click', viraCartao)
+
+
+     
       container.appendChild(cartao)
       
 }
