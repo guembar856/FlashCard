@@ -12,7 +12,7 @@ criaCartao(
 
 criaCartao(
     'Charadas',
-    'O que é, o que é? Um pontinho vermelho n parede?',
+    'O que é, o que é? Um pontinho vermelho na parede?',
     'Uma joaninha de castigo'
 )
 
